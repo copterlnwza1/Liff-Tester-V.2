@@ -6,6 +6,7 @@
   <title>ทดสอบโดยโบ้ V.2</title>
 </head>
   <style><left>
+body { padding: 259px }
 btnShare,btnLogin,btnLogOut {
 	box-shadow: 0px 3px 2px 0px #f0f7fa;
 	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
@@ -32,9 +33,9 @@ btnShare,btnLogin,btnLogOut:active {
 }
   </left></style>
 <body>
-  <button id="btnShare" onclick="sendShare()">ส่งให้เพื่อน
+  <button id="btnShare" onclick="sendShare()">ส่งให้เพื่อน</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button></left>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function sendShare() {
