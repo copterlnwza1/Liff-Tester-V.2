@@ -7,7 +7,7 @@
 </head>
 <style>
 body { padding: 259px }
-<left> button {
+button {
 	box-shadow: 0px 3px 2px 0px #f0f7fa;
 	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
 	background-color:#33bdef;
@@ -32,37 +32,9 @@ button:active {
 	top:1px;
 }
 </style>
-<body>
-	</left><style>
-body { padding: 259px }
-<left> button {
-	box-shadow: 0px 3px 2px 0px #f0f7fa;
-	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
-	background-color:#33bdef;
-	border-radius:26px;
-	border:2px solid #057fd0;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Times New Roman;
-	font-size:15px;
-	font-weight:bold;
-	padding:17px 65px;
-	text-decoration:none;
-	text-shadow:0px 2px 0px #5b6178;
-}
-button:hover {
-	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
-	background-color:#019ad2;
-}
-button:active {
-	position:relative;
-	top:1px;
-} </left>
   <button id="btnShare" onclick="sendShare()">ส่งให้เพื่อน</button>
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
-</style>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function sendShare() {
