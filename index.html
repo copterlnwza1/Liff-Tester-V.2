@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
   <title>ทดสอบโดยโบ้ V.2</title>
 </head>
-    <style>
-<left> Button { 
-	margin: 259px;
+  <style>
+.btnShare,btnLogin,btnLogOut {
 	box-shadow: 0px 3px 2px 0px #f0f7fa;
 	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
 	background-color:#33bdef;
@@ -23,17 +22,17 @@
 	text-decoration:none;
 	text-shadow:0px 2px 0px #5b6178;
 }
-.Button:hover {
+.btnShare,btnLogin,btnLogOut:hover {
 	background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
 	background-color:#019ad2;
 }
-.Button:active {
+.btnShare,btnLogin,btnLogOut:active {
 	position:relative;
 	top:1px;
 }
-  </left></style>
+  </style>
 <body>
-  <left><button id="btnShare" onclick="sendShare()">ส่งให้เพื่อน</button>
+  <button id="btnShare" onclick="sendShare()">ส่งให้เพื่อน
   <button id="btnLogin" onclick="liff.login()">Log In</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button></left>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
