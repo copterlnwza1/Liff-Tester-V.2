@@ -1,86 +1,255 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-  <meta charset="UTF-8"> 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-<title>ทดสอบโดยโบ้ V.2</title> 
-</head> 
+  <title>My LIFF App</title>
+</head>
+    <style>
+    body { padding: 259px }
+    button { display: none; width: 50%; padding: 33px; margin: 259px auto }
+  </style>
 <body>
-  <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
-  <script> 
-    async function main() {
-      await liff.init({ liffid: "1656966120-lGYWpjrr" }) 
-      await liff.shareTargetPicker([
+  <left><button id="btnShare" onclick="sendShare()">Share Target Picker</button></left>
+  <button id="btnLogin" onclick="liff.login()">Log In</button>
+  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script>
+    async function sendShare() {
+      const result = await liff.shareTargetPicker([
         {
-    type: "flex",
-    altText: "ทดสอบโดยโบ้ V.2", 
-    contents: {
-  "type": "bubble",
-  "hero": {
-    "type": "image",
-    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
-    "size": "full",
-    "aspectRatio": "20:13",
-    "aspectMode": "cover",
-    "action": {
-      "type": "uri",
-      "uri": "http://linecorp.com/"
-    }
-  },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "spacing": "sm",
-    "contents": [
-      {
-        "type": "button",
-        "style": "link",
-        "height": "sm",
+          "type": "flex",
+          "altText": "ทดสอบโดยโบ้",
+          "contents": {
+  "type": "carousel",
+  "contents": [
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "https://sv1.picz.in.th/images/2022/03/07/r2Knqt.jpg",
+        "size": "full",
         "action": {
           "type": "uri",
-          "label": "share",
-          "uri": "https://liff.line.me/1656966120-lGYWpjrr"
+          "label": "action",
+          "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D"
         }
       },
-      {
+      "body": {
         "type": "box",
         "layout": "vertical",
-        "contents": [],
-        "margin": "sm"
+        "contents": [
+          {
+            "type": "text",
+            "text": "3 โปรแรง แตกหนัก",
+            "size": "md",
+            "color": "#130907",
+            "align": "center",
+            "margin": "sm",
+            "weight": "bold"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D",
+              "label": "49 รับ 100"
+            },
+            "margin": "none",
+            "height": "sm",
+            "style": "primary",
+            "color": "#FD8210",
+            "offsetTop": "xs"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D",
+              "label": "75 รับ 100"
+            },
+            "margin": "none",
+            "height": "sm",
+            "style": "primary",
+            "color": "#3DCEEA",
+            "offsetTop": "md"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D",
+              "label": "30 รับ 100"
+            },
+            "margin": "none",
+            "height": "sm",
+            "style": "primary",
+            "color": "#FD6574",
+            "offsetTop": "xl"
+          }
+        ],
+        "paddingAll": "lg",
+        "paddingTop": "none",
+        "offsetTop": "none"
       }
-    ],
-    "flex": 0
-  }
-}
     },
-      ],
-      {
-        isMultiple: true,
-      })
-    .then(function (res) {
-      if (res) {
-        // succeeded in sending a message through TargetPicker
-        console.log(`[${res.status}] Message sent!`)
+    {
+      "type": "bubble",
+      "size": "mega",
+      "hero": {
+        "type": "image",
+        "url": "https://sv1.picz.in.th/images/2022/03/07/r23RyS.jpg",
+        "size": "full",
+        "margin": "none",
+        "aspectRatio": "1:1",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D"
+        }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "สายมู โปรเสริมดวง",
+            "size": "md",
+            "margin": "none",
+            "weight": "bold",
+            "align": "center",
+            "color": "#130907"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "ส่งให้เพื่อน",
+              "uri": "https://liff.line.me/1656966120-lGYWpjrr"
+            },
+            "color": "#F15A0A",
+            "style": "primary",
+            "height": "md",
+            "offsetTop": "xs",
+            "offsetBottom": "none",
+            "offsetStart": "none",
+            "gravity": "center",
+            "margin": "xs",
+            "adjustMode": "shrink-to-fit"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "label": "รับยอดเสียคืน",
+              "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D"
+            },
+            "color": "#D21617",
+            "style": "primary",
+            "height": "md",
+            "offsetTop": "xs",
+            "offsetBottom": "none",
+            "offsetStart": "none",
+            "gravity": "center",
+            "margin": "xs",
+            "adjustMode": "shrink-to-fit"
+          }
+        ]
+      }
+    },
+    {
+      "type": "bubble",
+      "hero": {
+        "type": "image",
+        "url": "https://sv1.picz.in.th/images/2022/03/07/r2w3CE.jpg",
+        "aspectRatio": "1:1",
+        "size": "full",
+        "margin": "none",
+        "action": {
+          "type": "uri",
+          "label": "action",
+          "uri": "https://sport.playauto.cloud/?prefix=QU1PTkw%3D"
+        }
+      },
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [
+          {
+            "type": "text",
+            "text": "ข้อดีของเว็บตรง",
+            "margin": "none",
+            "size": "md",
+            "color": "#130907",
+            "weight": "bold",
+            "align": "center"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "uri": "https://lin.ee/OAnsWCj",
+              "label": "ฝาก - ถอน"
+            },
+            "margin": "xs",
+            "height": "md",
+            "style": "primary",
+            "color": "#FF6B71",
+            "offsetTop": "xs"
+          },
+          {
+            "type": "button",
+            "action": {
+              "type": "uri",
+              "uri": "https://bit.ly/3BVjmhi",
+              "label": "ทางเข้าเว็บไซต์"
+            },
+            "margin": "xs",
+            "style": "primary",
+            "color": "#FC4542",
+            "height": "md",
+            "offsetBottom": "none",
+            "offsetTop": "sm"
+          }
+        ]
+      }
+    }
+  ]
+}
+        }
+      ])
+      if (result) {
+        alert(`[${result.status}] Message sent!`)
       } else {
-        const [majorVer, minorVer] = (liff.getLineVersion() || "").split('.');
-        if (parseInt(majorVer) == 10 && parseInt(minorVer) < 11) {
-          // LINE 10.3.0 - 10.10.0
-          // Old LINE will access here regardless of user's action
-          console.log('TargetPicker was opened at least. Whether succeeded to send message is unclear')
-        } else {
-          // LINE 10.11.0 -
-          // sending message canceled
-          console.log('TargetPicker was closed!')
+        const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
+
+        if (minorVer === undefined) {
+          alert('ShareTargetPicker was canceled in external browser')
+          return
+        }
+
+        if (parseInt(majorVer) >= 10 && parseInt(minorVer) >= 10 && parseInt(patchVer) > 0) {
+          alert('ShareTargetPicker was canceled in LINE app')
         }
       }
-    }).catch(function (error) {
-      // something went wrong before sending a message
-      console.log('something wrong happen')
-    })
-}
-   liff.closeWindow()
-  }
-  main() 
- </script>
-</body> 
+    }
+    function logOut() {
+      liff.logout()
+      window.location.reload()
+    }
+    async function main() {
+      await liff.init({ liffId: "1656966120-lGYWpjrr" })
+      if (liff.isLoggedIn()) {
+        document.getElementById("btnShare").style.display = "block"
+        if (!liff.isInClient()) {
+          document.getElementById("btnLogOut").style.display = "block"
+        }
+      } else {
+        document.getElementById("btnLogin").style.display = "block"
+      }
+    }
+    main()
+  </script>
+</body>
 </html>
