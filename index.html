@@ -33,9 +33,9 @@ button:active {
 }
 </style>
 <body>
-  <button id="btnShare" onclick="sendShare()">Share Target Picker</button>
-  <button id="btnLogin" onclick="liff.login()">Log In</button>
-  <button id="btnLogOut" onclick="logOut()">Log Out</button>
+  <button id="btnShare" onclick="sendShare()">แชร์</button>
+  <button id="btnLogin" onclick="liff.login()">ล็อกอิน</button>
+  <button id="btnLogOut" onclick="logOut()">ล็อกเอาท์</button>
   <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
   <script>
     async function sendShare() {
@@ -243,7 +243,7 @@ button:active {
         }
       ])
       if (result) {
-        alert(`[${result.status}] Message sent!`)
+        alert(`[${result.status}] แชร์สำเร็จ`)
       } else {
         const [majorVer, minorVer, patchVer] = (liff.getLineVersion() || "").split('.');
 
