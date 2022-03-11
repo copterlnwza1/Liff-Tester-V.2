@@ -10,17 +10,53 @@
   <script> 
     async function main() {
       await liff.init({ liffid: "1656966120-lGYWpjrr" }) 
-      await liff.shareTargetPicker(
-      [
+      await liff.shareTargetPicker([
         {
-          type: "text",
-          text: "Hello, World!",
-        },
+    type: "flex",
+    altText: "ทดสอบโดยโบ้ V.2", 
+    contents: {
+  "type": "bubble",
+  "hero": {
+    "type": "image",
+    "url": "https://scdn.line-apps.com/n/channel_devcenter/img/fx/01_1_cafe.png",
+    "size": "full",
+    "aspectRatio": "20:13",
+    "aspectMode": "cover",
+    "action": {
+      "type": "uri",
+      "uri": "http://linecorp.com/"
+    }
+  },
+  "footer": {
+    "type": "box",
+    "layout": "vertical",
+    "spacing": "sm",
+    "contents": [
+      {
+        "type": "button",
+        "style": "link",
+        "height": "sm",
+        "action": {
+          "type": "uri",
+          "label": "share",
+          "uri": "https://liff.line.me/1656966120-lGYWpjrr"
+        }
+      },
+      {
+        "type": "box",
+        "layout": "vertical",
+        "contents": [],
+        "margin": "sm"
+      }
+    ],
+    "flex": 0
+  }
+}
+    },
       ],
       {
         isMultiple: true,
-      }
-    )
+      })
     .then(function (res) {
       if (res) {
         // succeeded in sending a message through TargetPicker
